@@ -25,15 +25,15 @@ class MyModel(nn.Module):
         
         x1 = self.BILSTM(x1)
         x1 = x1.view(x1.size(0), -1)
-        x1 = self.drop(x1)
+        # x1 = self.drop(x1)
         
         x2 = self.resnet(x2)
         x2 = x2.view(x2.size(0), -1)
-        x2 = self.drop(x2)
+        # x2 = self.drop(x2)
         
         x3 = self.CBAM_CNN(x3)
         x3 = x3.view(x3.size(0), -1)
-        x3 = self.drop(x3)
+        # x3 = self.drop(x3)
 
         
         # Concatenate in dim1 (feature dimension)
